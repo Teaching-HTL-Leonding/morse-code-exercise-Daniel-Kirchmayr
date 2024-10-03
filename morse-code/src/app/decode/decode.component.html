@@ -1,1 +1,7 @@
-<p>decode works!</p>
+<div>
+  <h1>Morse Code Decoder</h1>
+  <input type="text" [(ngModel)]="decodeInput" placeholder="Enter Morse code here">
+  <button (click)="decode()" [disabled]="!isValidMorseCode(decodeInput())">Decode</button>
+  <p>{{ errorMessages() }}</p>
+  <input type="text" [value]="decodeOutput()" readonly>
+</div>
