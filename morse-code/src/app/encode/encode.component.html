@@ -1,0 +1,11 @@
+
+<div>
+  <h1>Encode</h1>
+
+  <input type="text" [(ngModel)]="encodeInput" placeholder="I Just lost ny dawag!" />
+  <button (click)="encode()" [disabled]="!isValidPlainText(encodeInput())">Encode</button>
+  <p> {{errorMessages()}} </p>
+  <input type="text" [value]="encodeOutput()" readonly>
+</div>
+
+
